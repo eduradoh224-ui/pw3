@@ -1,0 +1,298 @@
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #1d1d1d;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== CABEÇALHO COM FLEXBOX ===== */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 7%;
+    background-color: #111111;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #ff6b00;
+}
+
+/* ===== BANNER ===== */
+.banner {
+    min-height: 78vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 70px 7%;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.banner-texto,
+.banner-imagem {
+    flex: 1;
+}
+
+.banner-texto h1 {
+    font-size: clamp(36px, 5vw, 68px);
+    line-height: 1.05;
+    margin: 12px 0 20px;
+}
+
+.banner-texto p {
+    max-width: 600px;
+    color: #d3d3d3;
+    margin-bottom: 28px;
+}
+
+.banner-imagem img {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.destaque {
+    color: #ff6b00;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #ff6b00;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 13px 24px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* ===== SEÇÕES ===== */
+.secao,
+.servicos {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 25px;
+}
+
+.titulo-secao {
+    margin-bottom: 30px;
+}
+
+.titulo-secao p {
+    color: #ff6b00;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.titulo-secao h2,
+.contato h2 {
+    font-size: clamp(28px, 4vw, 44px);
+}
+
+/* ===== CARDS COM FLEXBOX ===== */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.card {
+    flex: 1 1 280px;
+    background-color: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-conteudo {
+    padding: 22px;
+}
+
+.card-conteudo h3 {
+    margin-bottom: 8px;
+}
+
+/* ===== SERVIÇOS COM FLEXBOX ===== */
+.servicos {
+    background-color: #ffffff;
+    max-width: none;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.lista-servicos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.servico {
+    flex: 1 1 250px;
+    max-width: 360px;
+    padding: 26px;
+    background-color: #f4f4f4;
+    border-left: 5px solid #ff6b00;
+    border-radius: 10px;
+}
+
+.servico span {
+    font-size: 34px;
+    font-weight: bold;
+    color: #ff6b00;
+}
+
+/* ===== CONTATO ===== */
+.contato {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 60px 7%;
+    background-color: #ff6b00;
+    color: white;
+}
+
+.contato .destaque {
+    color: #ffffff;
+}
+
+.botao-claro {
+    background-color: white;
+    color: #1a1a1a;
+    white-space: nowrap;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 22px;
+    background-color: #111111;
+    color: white;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 800px) {
+    .cabecalho {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .banner {
+        flex-direction: column;
+        text-align: center;
+        min-height: auto;
+        padding-top: 55px;
+    }
+
+    .banner-texto p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .banner-imagem {
+        width: 100%;
+    }
+
+    .contato {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ===== CELULAR ===== */
+@media (max-width: 500px) {
+    .cabecalho {
+        padding: 18px 20px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .banner {
+        padding: 45px 20px;
+    }
+
+    .secao,
+    .servicos {
+        padding: 50px 20px;
+    }
+
+    .cards,
+    .lista-servicos {
+        flex-direction: column;
+    }
+
+    .card,
+    .servico {
+        width: 100%;
+        max-width: none;
+    }
+
+    .contato {
+        padding: 50px 20px;
+    }
+}
